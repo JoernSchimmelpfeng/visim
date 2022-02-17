@@ -1,4 +1,4 @@
-package de.spinnerei.virussimulator
+package de.dhbw.virussimulator
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import de.spinnerei.virussimulator.databinding.FragmentSecondBinding
+import de.dhbw.virussimulator.databinding.FragmentSecondBinding
 
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.

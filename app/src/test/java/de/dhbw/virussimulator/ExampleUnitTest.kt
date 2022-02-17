@@ -1,4 +1,4 @@
-package de.spinnerei.virussimulator
+package de.dhbw.virussimulator
 
 import org.junit.Test
 

@@ -1,6 +1,9 @@
-package de.spinnerei.virussimulator
+package de.dhbw.virussimulator
 
+import android.bluetooth.BluetoothAdapter
+import android.bluetooth.BluetoothManager
 import android.os.Bundle
+import android.util.Log
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -9,7 +12,7 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
-import de.spinnerei.virussimulator.databinding.ActivityMainBinding
+import de.dhbw.virussimulator.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
@@ -32,6 +35,14 @@ class MainActivity : AppCompatActivity() {
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
         }
+        val bluetoothAdapter: BluetoothAdapter? = BluetoothAdapter.getDefaultAdapter()
+        if (bluetoothAdapter == null) {
+            Log.e("Tag", "No Bluetooth found." )
+        } else {
+            Log.i("Tag", "Bluetooth found." )
+        }
+
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
